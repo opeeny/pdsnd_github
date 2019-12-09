@@ -22,7 +22,7 @@ def specify_city():
             print('Looks like youre interested in Chicago data')
             return 'chicago.csv'
         elif city.lower() == 'new york':
-            print('Looks like youre interested in New york data')
+            print('Looks like you are interested in New York data')
             return 'new_york_city.csv'
         elif city.lower() == 'washington':
             print('Looks like youre interested in Washington data')
@@ -32,7 +32,7 @@ def specify_city():
                   'Chicago, New York, or Washington.')
 
 def provide_time_frame():
-    '''This Queries the user for a time period and returns the specified filter.
+    '''This Asks the user for a time period and returns the specified filter.
 
     Args:
         none.
