@@ -1,0 +1,3 @@
+# Files not to be staged/pushed to the remote repository#
+*.csv
+*.txt
