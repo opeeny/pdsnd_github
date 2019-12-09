@@ -46,7 +46,7 @@ In the future, more functions that compute statistics will be added to answer mo
 * https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_string.html
 
 ###### Assessing datetime series:
-*https://stackoverflow.com/questions/42977395/pandas-dt-hour-formatting by godfreyopeeny
+*https://stackoverflow.com/questions/42977395/pandas-dt-hour-formatting by [godfrey opeeny](https:opeeny.github.io)
 * https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.dt.html
 * https://stackoverflow.com/questions/29366572/pandas-how-to-filter-most-frequent-datetime-objects
 
