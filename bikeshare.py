@@ -1,5 +1,5 @@
 import pandas as pd
-from datetime import datetime
+from datetime import datetime as dt
 from datetime import timedelta
 import time
 
@@ -43,8 +43,6 @@ def provide_time_frame():
     while time_frame.lower() not in ['month', 'day', 'none']:   
         time_frame = input('\nWould you like to filter the data by month, day,'
                             ' or not at all? Type "month", "day", or "none" for no time filter: ')
-       # time_frame2 = input('\nWould you like to filter the data by month, day,'
-                            #' or not at all? Type "month", "day", or "none" for no time filter: ')
         if time_frame.lower() not in ['month', 'day', 'none']:
             print('Sorry, I do not understand that input.')
     return time_frame
@@ -92,7 +90,7 @@ def specify_day():
                       ' response as an integer.')
                 day = input('\nWhich day? Please type an integer as your response e.g 1 for Sun, 2 for Mon, etc\n')
         try:
-            start_date = datetime(2017, month, day)
+            start_date = dt(2017, month, day)
             valid_date = True
         except ValueError as ve:
             print(str(ve).capitalize())
@@ -240,7 +238,8 @@ def display_data(df):
         else:
             return False
     head = 0
-    tail = 7#display the last seven rows
+    #display the last seven rows
+    tail = 7
     valid_input = False
     while valid_input == False:
         display = input('\nWould you like to view individual trip data? '
@@ -252,7 +251,7 @@ def display_data(df):
             print("Sorry, Your input is not understood. Please type 'yes' or"
                   " 'no'.")
     if display.lower() == 'yes':
-        # prints every column except the 'journey' column created in statistics()
+    #This prints every column except the 'journey' column created in the descriptive_stats()
         print(df[df.columns[0:-1]].iloc[head:tail])
         display_more = ''
         while display_more.lower() != 'no':
