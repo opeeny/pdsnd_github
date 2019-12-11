@@ -43,8 +43,6 @@ def provide_time_frame():
     while time_frame.lower() not in ['month', 'day', 'none']:   
         time_frame = input('\nWould you like to filter the data by month, day,'
                             ' or not at all? Type "month", "day", or "none" for no time filter: ')
-       # time_frame2 = input('\nWould you like to filter the data by month, day,'
-                            #' or not at all? Type "month", "day", or "none" for no time filter: ')
         if time_frame.lower() not in ['month', 'day', 'none']:
             print('Sorry, I do not understand that input.')
     return time_frame
