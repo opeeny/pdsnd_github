@@ -238,7 +238,8 @@ def display_data(df):
         else:
             return False
     head = 0
-    tail = 7#display the last seven rows
+    #display the last seven rows
+    tail = 7
     valid_input = False
     while valid_input == False:
         display = input('\nWould you like to view individual trip data? '
@@ -250,7 +251,7 @@ def display_data(df):
             print("Sorry, Your input is not understood. Please type 'yes' or"
                   " 'no'.")
     if display.lower() == 'yes':
-        # prints every column except the 'journey' column created in statistics()
+    #This prints every column except the 'journey' column created in the descriptive_stats()
         print(df[df.columns[0:-1]].iloc[head:tail])
         display_more = ''
         while display_more.lower() != 'no':
