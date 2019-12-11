@@ -1,5 +1,5 @@
 import pandas as pd
-from datetime import datetime
+from datetime import datetime as dt
 from datetime import timedelta
 import time
 
@@ -92,7 +92,7 @@ def specify_day():
                       ' response as an integer.')
                 day = input('\nWhich day? Please type an integer as your response e.g 1 for Sun, 2 for Mon, etc\n')
         try:
-            start_date = datetime(2017, month, day)
+            start_date = dt(2017, month, day)
             valid_date = True
         except ValueError as ve:
             print(str(ve).capitalize())
